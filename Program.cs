@@ -17,6 +17,7 @@ namespace GPG_Pubkey_bot
             var bot = Vars.BotClient.GetMeAsync().Result;
             Console.WriteLine(
                 $"ID: {bot.Id} \nName: {bot.FirstName}."
+                
             );
         }
     }
