@@ -7,22 +7,23 @@ namespace GPG_Pubkey_bot.IO
 {
     public class File
     {
-        public async Task<int> WriteConf(string Filename, object ConfObj)
+        public async Task<int> WriteConf(string filename, object confObj)
         {
             await System.IO.File.WriteAllTextAsync(
-                Filename, 
-                await Json.Serialize(ConfObj)
+                filename, 
+                await Json.Serialize(confObj)
             );
             return 0;
         }
 
-        public async Task<object> ReadConf(string Filename)
+        public async Task<object> ReadConf(string filename)
         {
-            string content = await System.IO.File.ReadAllTextAsync(
-                Filename,
-                Encoding.UTF8
-            );
-            return await Json.Parse<object>(content);
+            return await Json.Parse<object>(
+                await System.IO.File.ReadAllTextAsync(
+                    filename, 
+                    Encoding.UTF8
+                    )
+                );
         }
     }
 }
