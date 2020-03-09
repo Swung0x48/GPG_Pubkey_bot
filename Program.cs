@@ -1,5 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
 using GPG_Pubkey_bot.Misc;
+using GPG_Pubkey_bot.Utils;
 
 namespace GPG_Pubkey_bot
 {
@@ -7,11 +10,11 @@ namespace GPG_Pubkey_bot
     {
         static async Task Main(string[] args)
         {
-            Vars.Uptime.Start();
+            Vars.Stopwatch.Start();
+            Vars.CurrentConf = await IO.File.ReadConf<ConfObj>(Vars.ConfFile);
             
-            string APIKey = "1092977013:AAG_wU89sLH0dz4QbG3BuNxBwVUPl6yI0gg";
-            await Bot.Init(APIKey);
-            
+            await IO.File.WriteConf(Vars.ConfFile, Vars.CurrentConf);
+            await Bot.Init(Vars.CurrentConf.ApiKey);
         }
     }
 }

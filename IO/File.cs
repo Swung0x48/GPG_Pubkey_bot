@@ -1,4 +1,4 @@
-using System.Reflection;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 using GPG_Pubkey_bot.Utils;
@@ -7,18 +7,25 @@ namespace GPG_Pubkey_bot.IO
 {
     public class File
     {
-        public async Task<int> WriteConf(string filename, object confObj)
+        public static async Task WriteConf(string filename, object obj)
         {
-            await System.IO.File.WriteAllTextAsync(
-                filename, 
-                await Json.Serialize(confObj)
-            );
-            return 0;
+            try
+            {
+                await System.IO.File.WriteAllTextAsync(
+                    filename, 
+                    await Json.Serialize(obj)
+                );
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
-        public async Task<object> ReadConf(string filename)
+        public static async Task<T> ReadConf<T>(string filename)
         {
-            return await Json.Parse<object>(
+            return await Json.Parse<T>(
                 await System.IO.File.ReadAllTextAsync(
                     filename, 
                     Encoding.UTF8

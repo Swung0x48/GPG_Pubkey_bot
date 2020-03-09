@@ -10,7 +10,7 @@ namespace GPG_Pubkey_bot.Utils
         }
 
         public static async Task<string> Serialize(object jsonObj) {
-            return JsonConvert.SerializeObject(jsonObj);
+            return JsonConvert.SerializeObject(jsonObj, Formatting.Indented);
         }
     }
 }
