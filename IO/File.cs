@@ -23,8 +23,12 @@ namespace GPG_Pubkey_bot.IO
             }
         }
 
-        public static async Task<T> ReadConf<T>(string filename)
+        public static async Task<T> ReadConf<T>(string filename, bool isAutoSave = false)
         {
+            if (isAutoSave)
+            {
+                Console.WriteLine("Auto saving configuration file...");
+            }
             return await Json.Parse<T>(
                 await System.IO.File.ReadAllTextAsync(
                     filename, 
