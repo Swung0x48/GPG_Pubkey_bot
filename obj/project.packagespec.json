@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/swung0x48/RiderProjects/GPG_Pubkey_bot/GPG_Pubkey_bot.csproj",
-    "projectName": "GPG_Pubkey_bot",
-    "projectPath": "/Users/swung0x48/RiderProjects/GPG_Pubkey_bot/GPG_Pubkey_bot.csproj",
-    "outputPath": "/Users/swung0x48/RiderProjects/GPG_Pubkey_bot/obj/",
+    "projectUniqueName": "/Users/swung0x48/RiderProjects/ChannelPosting_bot/ChannelPosting_bot.csproj",
+    "projectName": "ChannelPosting_bot",
+    "projectPath": "/Users/swung0x48/RiderProjects/ChannelPosting_bot/ChannelPosting_bot.csproj",
+    "outputPath": "/Users/swung0x48/RiderProjects/ChannelPosting_bot/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"

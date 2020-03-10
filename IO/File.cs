@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using GPG_Pubkey_bot.Utils;
+using ChannelPosting_bot.Utils;
 
-namespace GPG_Pubkey_bot.IO
+namespace ChannelPosting_bot.IO
 {
     public class File
     {

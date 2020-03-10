@@ -1,8 +1,8 @@
 using System.Net.Http;
 using System.Threading.Tasks;
-using GPG_Pubkey_bot.Misc;
+using ChannelPosting_bot.Misc;
 
-namespace GPG_Pubkey_bot.IO
+namespace ChannelPosting_bot.IO
 {
     public class Networking
     {

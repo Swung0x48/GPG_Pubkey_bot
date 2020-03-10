@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using GPG_Pubkey_bot.Misc;
+using ChannelPosting_bot.Misc;
 
-namespace GPG_Pubkey_bot
+namespace ChannelPosting_bot
 {
     class Program
     {

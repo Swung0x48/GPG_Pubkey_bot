@@ -1,11 +1,11 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using GPG_Pubkey_bot.Misc;
+using ChannelPosting_bot.Misc;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 
-namespace GPG_Pubkey_bot
+namespace ChannelPosting_bot
 {
     public class Bot
     {

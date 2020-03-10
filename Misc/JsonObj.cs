@@ -1,4 +1,4 @@
-namespace GPG_Pubkey_bot.Misc
+namespace ChannelPosting_bot.Misc
 {
     public class ConfObj
     {

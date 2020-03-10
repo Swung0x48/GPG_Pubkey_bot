@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace GPG_Pubkey_bot.Utils
+namespace ChannelPosting_bot.Utils
 {
     public class Json
     {
