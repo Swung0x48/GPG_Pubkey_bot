@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Reflection;
 using Telegram.Bot;
 
-namespace ChannelPosting_bot.Misc
+namespace Postbox_bot.Misc
 {
     public class Vars {
         public static Stopwatch Stopwatch = new Stopwatch();
@@ -14,9 +14,9 @@ namespace ChannelPosting_bot.Misc
         public readonly static string AppDirectory = 
             (new FileInfo(AppExecutable)).DirectoryName;
         public static string ConfFile = 
-            Path.Combine(AppDirectory, "ChannelPosting_bot.json");
+            Path.Combine(AppDirectory, "Postbox_bot.json");
         public static string LangFile = 
-            Path.Combine(AppDirectory, "ChannelPosting_bot_locale.json");
+            Path.Combine(AppDirectory, "Postbox_bot_locale.json");
         public static ITelegramBotClient BotClient;
         public static readonly HttpClient HttpClient = new HttpClient();
         public static ConfObj CurrentConf = new ConfObj();

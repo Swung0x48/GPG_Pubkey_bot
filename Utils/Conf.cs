@@ -1,4 +1,4 @@
-namespace ChannelPosting_bot.Utils
+namespace Postbox_bot.Utils
 {
     public class Conf
     {

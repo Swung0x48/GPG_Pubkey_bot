@@ -1,8 +1,8 @@
 using System.Net.Http;
 using System.Threading.Tasks;
-using ChannelPosting_bot.Misc;
+using Postbox_bot.Misc;
 
-namespace ChannelPosting_bot.IO
+namespace Postbox_bot.IO
 {
     public class Networking
     {

@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ChannelPosting_bot.Utils
+namespace Postbox_bot.Utils
 {
     public class CmdProcessor
     {

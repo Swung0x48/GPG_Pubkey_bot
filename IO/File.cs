@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using ChannelPosting_bot.Utils;
+using Postbox_bot.Utils;
 
-namespace ChannelPosting_bot.IO
+namespace Postbox_bot.IO
 {
     public class File
     {

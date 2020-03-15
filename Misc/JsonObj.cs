@@ -1,4 +1,4 @@
-namespace ChannelPosting_bot.Misc
+namespace Postbox_bot.Misc
 {
     public class ConfObj
     {

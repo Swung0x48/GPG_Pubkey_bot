@@ -1,11 +1,11 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ChannelPosting_bot.Misc;
+using Postbox_bot.Misc;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 
-namespace ChannelPosting_bot
+namespace Postbox_bot
 {
     public class Bot
     {

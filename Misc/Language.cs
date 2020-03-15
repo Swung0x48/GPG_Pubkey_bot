@@ -1,6 +1,6 @@
 
 
-namespace ChannelPosting_bot.Misc
+namespace Postbox_bot.Misc
 {
     public static class Language
     {

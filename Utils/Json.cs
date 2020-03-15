@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace ChannelPosting_bot.Utils
+namespace Postbox_bot.Utils
 {
     public class Json
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using ChannelPosting_bot.Misc;
-using ChannelPosting_bot.Utils;
+using Postbox_bot.Utils;
+using Postbox_bot.Misc;
 
-namespace ChannelPosting_bot
+namespace Postbox_bot
 {
     class Program
     {
