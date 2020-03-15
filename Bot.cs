@@ -11,17 +11,17 @@ namespace ChannelPosting_bot
     {
         public static async Task Init(string APIKey)
         {
-            Vars.BotClient = new TelegramBotClient(APIKey);
+            Vars.BotClient = new TelegramBotClient(APIKey);                               // Get the API Key to start bot.
             
-            var botInstance = Vars.BotClient.GetMeAsync().Result;
-            Console.WriteLine($"ID: {botInstance.Id} \nName: {botInstance.FirstName}.");
+            var botInstance = Vars.BotClient.GetMeAsync().Result;                    // Get the bot instance info.
+            Console.WriteLine($"ID: {botInstance.Id} \nName: {botInstance.FirstName}.");  // Print it.
             
-            Vars.BotClient.OnMessage += OnMessage;
+            Vars.BotClient.OnMessage += OnMessage;                                        // Add OnMessage() to bot Client's OnMessage listener
             Vars.BotClient.StartReceiving();
 
-            while (true)
+            while (true)                                                                    
             {
-                Thread.Sleep(int.MaxValue);
+                Thread.Sleep(int.MaxValue);                                // Keeping the whole thing running.
             }
 
         }
@@ -34,11 +34,17 @@ namespace ChannelPosting_bot
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
                 if (e.Message.Text == "/uptime")
                 {
-                    Vars.Uptime = Vars.Stopwatch.Elapsed;
-                    Vars.BotClient.SendTextMessageAsync(e.Message.Chat, $"Current uptime is {Vars.Uptime.ToString()}");
+                    Vars.BotClient.SendTextMessageAsync(
+                        e.Message.Chat, 
+                        $"Current uptime is {Vars.Uptime}"
+                        );
                 }
-                else
-                    Vars.BotClient.SendTextMessageAsync(e.Message.Chat, e.Message.Text);
+                else if (e.Message.Text == "/start")
+                {
+                    Vars.BotClient.SendTextMessageAsync(
+                        e.Message.Chat, " "
+                        );
+                }
             }
         }
     }
