@@ -9,9 +9,9 @@ namespace Postbox_bot
 {
     public class Bot
     {
-        public static async Task Init(string APIKey)
+        public static async Task Init(string apiKey)
         {
-            Vars.BotClient = new TelegramBotClient(APIKey);                               // Get the API Key to start bot.
+            Vars.BotClient = new TelegramBotClient(apiKey);                               // Get the API Key to start bot.
             
             var botInstance = Vars.BotClient.GetMeAsync().Result;                    // Get the bot instance info.
             Console.WriteLine($"ID: {botInstance.Id} \nName: {botInstance.FirstName}.");  // Print it.
@@ -32,18 +32,13 @@ namespace Postbox_bot
             {
                 
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
-                if (e.Message.Text == "/uptime")
+                if (e.Message.Text == "/uptime")                                            // TODO : Implement CmdProcessor to replace if blocks
                 {
-                    Vars.BotClient.SendTextMessageAsync(
-                        e.Message.Chat, 
-                        $"Current uptime is {Vars.Uptime}"
-                        );
+                    Vars.BotClient.SendTextMessageAsync(e.Message.Chat, $"Current uptime is {Vars.Uptime}");
                 }
                 else if (e.Message.Text == "/start")
                 {
-                    Vars.BotClient.SendTextMessageAsync(
-                        e.Message.Chat, " "
-                        );
+                    Vars.BotClient.SendTextMessageAsync(e.Message.Chat, " ");
                 }
             }
         }
