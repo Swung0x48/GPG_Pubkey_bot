@@ -15,19 +15,19 @@ namespace Postbox_bot
 
             if (!File.Exists(Vars.ConfFile))
             {
-                Console.WriteLine(Language.Msg_ConfNotFound);
-                Console.WriteLine(Language.Msg_FirstBoot);
-                Console.WriteLine(Language.Msg_ReqApiKey);
+                Console.WriteLine(Language.MsgConfNotFound);
+                Console.WriteLine(Language.MsgFirstBoot);
+                Console.WriteLine(Language.MsgReqApiKey);
                 Vars.CurrentConf.ApiKey = Console.ReadLine();
                 await IO.File.WriteConf(Vars.ConfFile, Vars.CurrentConf);
             }
-            Console.WriteLine(Language.Msg_ReadConf);
+            Console.WriteLine(Language.MsgReadConf);
             Vars.CurrentConf = await IO.File.ReadConf<ConfObj>(Vars.ConfFile);
             
             
             await IO.File.WriteConf(Vars.ConfFile, Vars.CurrentConf);
             
-            Console.WriteLine(Language.Msg_BotInit);
+            Console.WriteLine(Language.MsgBotInit);
             await Bot.Init(Vars.CurrentConf.ApiKey);
         }
     }
